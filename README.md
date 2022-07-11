@@ -18,7 +18,7 @@
 ![Team Profile Generator Screenshot](./public/assets/images/teamGen%20Screenshot.png)<br/><br>
 
 ## Video Walkthrough
-[Video Walkthrough](https://drive.google.com/file/d/1QCzWoaJYWWbQvperTpMZz422nWfcUTaY/view)
+[Video Walkthrough](https://drive.google.com/file/d/11D2oAkxJxyovrvE_5ZzX-ZPpiUAC5o5r/view)
 <br><br>
 
 ## Description
