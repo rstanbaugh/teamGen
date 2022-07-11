@@ -32,14 +32,14 @@ async function main() {
     }
     let finalHTML = html.generateHTML(teamString);
 
-    console.clear();
+    // console.clear();
     console.log('------------------------------------------');
     console.log('Generating index.html file...')
     console.log('------------------------------------------');
 
     writeFileAsync('./dist/index.html', finalHTML);
 
-    console.clear();
+    // console.clear();
     console.log('------------------------------------------');
     console.log('index.html file created')
     console.log('------------------------------------------');
@@ -51,7 +51,7 @@ async function main() {
 
 // Inquirer function to gather user info
 async function prompt() {
-  let resDone = "";
+  let resDone = 'Yes';
   do {
     try {
       console.log('------------------------------------------');
@@ -166,7 +166,7 @@ async function prompt() {
     resDone = await inquirer.prompt([
       {
         type: 'list',
-        name: 'done',
+        name: 'continue',
         message: "Do you wish to continue adding team members? ",
         choices: [
           'Yes',
@@ -174,7 +174,10 @@ async function prompt() {
         ]
       }
     ])
-  } while (resDone.finish === "Yes");
+    console.clear;
+    console.log(resDone)
+
+  } while (resDone.continue === "Yes");
 }
 
 // start program
