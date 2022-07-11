@@ -10,6 +10,7 @@
   
 <p align="center">
     <img src="https://img.shields.io/badge/Javascript-yellow" />
+    <img src="https://img.shields.io/badge/node.js-green" />
     <img src="https://img.shields.io/badge/Inquirer-blue"  />
     <img src="https://img.shields.io/badge/Jest-orange"  />
 </p>
