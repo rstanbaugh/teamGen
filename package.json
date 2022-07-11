@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/rstanbaugh/teamGen#readme",
   "dependencies": {
-    "inquirer": "^9.0.0"
+    "inquirer": "^9.0.0",
+    "node": "^16.15.0"
   },
   "devDependencies": {
     "jest": "^28.1.2"
