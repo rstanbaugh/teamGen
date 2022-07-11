@@ -35,7 +35,6 @@ const generateHTML = function (teamString) {
 
 // Generates cards for each employee class based on user input in Inquirer
 const generateCard = function (arr) {
-
   // Fontawesome Icons change based on role
   let positionIcon;
   // Criteria for display
@@ -53,24 +52,23 @@ const generateCard = function (arr) {
   }
 
   return `
-  
-<div class="col-md-4 col-sm-6 col-12 col-lg-3">    
-  <div class="card shadow-lg mb-5 bg-white rounded">
-      <div class="card-header bg-primary">
-          <h4 class="text-white text-center">${arr.name}</h4>  
-          <h4 class="text-white text-center">${positionIcon}</i> ${arr.title}</h4>
-      </div>
+    <div class="col-md-4 col-sm-6 col-12 col-lg-3">    
+      <div class="card shadow-lg mb-5 bg-white rounded">
+          <div class="card-header bg-primary">
+              <h4 class="text-white text-center">${arr.name}</h4>  
+              <h4 class="text-white text-center">${positionIcon}</i> ${arr.title}</h4>
+          </div>
 
-      <div class="card-body">
-          <ul class="list-unstyled">
-              <li>Employee ID: ${arr.id}</li>
-              <li>Email: <a href="mailto:${arr.email}">${arr.email}</a></li>
-              <li>${roleInfo}</li>
-          </ul>
+          <div class="card-body">
+              <ul class="list-unstyled">
+                  <li>Employee ID: ${arr.id}</li>
+                  <li>Email: <a href="mailto:${arr.email}">${arr.email}</a></li>
+                  <li>${roleInfo}</li>
+              </ul>
+          </div>
       </div>
-  </div>
-</div>
-`
+    </div>
+  `
 }
 
 exports.generateHTML = generateHTML;

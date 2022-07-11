@@ -5,7 +5,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 const fs = require('fs');
-const util = require('util')
+const util = require('util');
 const html = require("./src/htmlTemp");
 
 // Set up Async file functions
@@ -16,7 +16,7 @@ const appendFileAsync = util.promisify(fs.appendFile);
 let teamArray = [];
 let teamString = ``;
 
-console.clear();
+// console.clear();
 console.log("==========================================");
 console.log("teamGen - Team Portfolio Generator")
 console.log("==========================================");
@@ -27,7 +27,10 @@ async function main() {
   try {
     await prompt()
 
-    for(let i = 0; i<teamString.length; i++) {
+    console.log(teamArray);
+
+    for(let i = 0; i<teamArray.length; i++) {
+      console.log(teamString);
       teamString = teamString + html.generateCard(teamArray[i]);
     }
     let finalHTML = html.generateHTML(teamString);
@@ -154,7 +157,7 @@ async function prompt() {
           resEmployee.name,
           resEmployee.id,
           resEmployee.email,
-          resRole.github);
+          resRole.school);
         teamArray.push(intern);
       }
 
