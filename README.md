@@ -15,9 +15,12 @@
     <img src="https://img.shields.io/badge/Jest-orange"  />
 </p>
 
-![Team Profile Generator Screenshot](./public/assets/images/eCommerce-Backend-Screenshot.png)<br/>
+![Team Profile Generator Screenshot](./public/assets/images/teamGen%20Screenshot.png)<br/><br>
 
-   
+## Video Walkthrough
+[Video Walkthrough](https://drive.google.com/file/d/1QCzWoaJYWWbQvperTpMZz422nWfcUTaY/view)
+<br><br>
+
 ## Description
 
 🔍 A javascript application for building Team Profiles based on user answers to inquirer-driven questions. Built using Javascript, Inquirer and tested with Jest.
@@ -54,6 +57,7 @@ THEN I exit the application, and the HTML is generated
 ```
   
 ## Table of Contents
+- [Video Walkthrough](#video-walkthrough)
 - [Description](#description)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
