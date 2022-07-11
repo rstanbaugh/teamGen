@@ -23,7 +23,7 @@ const generateHTML = function (teamString) {
 
       <div class="container-body container-fluid">
 
-      <div class="row">
+      <div class="row d-flex justify-content-center">
             ${teamString} 
         </div>
       </div>
@@ -34,35 +34,35 @@ const generateHTML = function (teamString) {
 }
 
 // Generates cards for each employee class based on user input in Inquirer
-const generateCard = function (arr) {
+const generateCard = function (employee) {
   // Fontawesome Icons change based on role
   let positionIcon;
   // Criteria for display
   let roleInfo;
 
-  if (arr.title === "Manager") {
+  if (employee.title === "Manager") {
       positionIcon = `<i class="fas fa-mug-hot"></i>`
-      roleInfo = `Office Number: ${arr.officeNumber}`
-  } else if (arr.title === "Engineer") {
+      roleInfo = `Office Number: ${employee.officeNumber}`
+  } else if (employee.title === "Engineer") {
       positionIcon = `<i class="fas fa-glasses"></i>`
-      roleInfo = `GitHub Username: <a href="https://github.com/${arr.github}" target="_blank">${arr.github}</a>`
-  } else if (arr.title === "Intern") {
+      roleInfo = `GitHub Username: <a href="https://github.com/${employee.github}" target="_blank">${employee.github}</a>`
+  } else if (employee.title === "Intern") {
       positionIcon = `<i class="fas fa-user-graduate"></i>`
-      roleInfo = `School: ${arr.school}`
+      roleInfo = `School: ${employee.school}`
   }
 
   return `
     <div class="col-md-4 col-sm-6 col-12 col-lg-3">    
       <div class="card shadow-lg mb-5 bg-white rounded">
           <div class="card-header bg-primary">
-              <h4 class="text-white text-center">${arr.name}</h4>  
-              <h4 class="text-white text-center">${positionIcon}</i> ${arr.title}</h4>
+              <h4 class="text-white text-center">${employee.name}</h4>  
+              <h4 class="text-white text-center">${positionIcon}</i> ${employee.title}</h4>
           </div>
 
           <div class="card-body">
               <ul class="list-unstyled">
-                  <li>Employee ID: ${arr.id}</li>
-                  <li>Email: <a href="mailto:${arr.email}">${arr.email}</a></li>
+                  <li>Employee ID: ${employee.id}</li>
+                  <li>Email: <a href="mailto:${employee.email}">${employee.email}</a></li>
                   <li>${roleInfo}</li>
               </ul>
           </div>

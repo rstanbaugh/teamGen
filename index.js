@@ -6,7 +6,7 @@ const Intern = require('./lib/Intern');
 
 const fs = require('fs');
 const util = require('util');
-const html = require("./src/htmlTemp");
+const html = require("./src/htmlFuncs");
 
 // Set up Async file functions
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -16,7 +16,7 @@ const appendFileAsync = util.promisify(fs.appendFile);
 let teamArray = [];
 let teamString = ``;
 
-// console.clear();
+console.clear();
 console.log("==========================================");
 console.log("teamGen - Team Portfolio Generator")
 console.log("==========================================");
@@ -35,14 +35,14 @@ async function main() {
     }
     let finalHTML = html.generateHTML(teamString);
 
-    // console.clear();
+    console.clear();
     console.log('------------------------------------------');
     console.log('Generating index.html file...')
     console.log('------------------------------------------');
 
     writeFileAsync('./dist/index.html', finalHTML);
 
-    // console.clear();
+    console.clear();
     console.log('------------------------------------------');
     console.log('index.html file created')
     console.log('------------------------------------------');
