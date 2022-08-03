@@ -87,6 +87,7 @@ Run the following command at the root of your project:
 
 ## Contributing
 Rich Stanbaugh
+https://github.com/jpd61 - used repo from this profile to remember how to use / format inquire
 
 
   ## Questions
